@@ -98,6 +98,7 @@ Run: rspec
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Style the app]**
+- [ ] **[Add multiple greetings API Endpoint]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
