@@ -9,7 +9,7 @@ import {createRoot} from 'react-dom/client';
 import { Routes, Route, Outlet, Link, BrowserRouter as Router } from "react-router-dom";
 // import MyComponent from "./components/MyComponent";
 import Home from "./components/Home";
-import Random from "./components/Random";
+import Random from "./components/Greeting";
 function App() {
   return (
     <div>
