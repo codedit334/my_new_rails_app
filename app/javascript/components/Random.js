@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
+import { getGreetings } from "../redux/greetingsSlice";
+
+
 
 export default function Random() {
-  const [greeting, setGreeting] = useState('');
 
+
+  const dispatch = useDispatch();
+  const greeting = useSelector((state) => state.greeting)
+  
   useEffect(() => {
-    fetch('/api/v1/random_greeting') // Replace with your API endpoint URL
-      .then((response) => response.json())
-      .then((data) => setGreeting(data.message))
-      .catch((error) => console.error('Error:', error));
-  }, []);
-
+    dispatch(getGreetings());
+    }, [dispatch]);
+    
   return (
     <div>
       <h1>To you my dear I would say: </h1>
-      <h3>{greeting}</h3>
+      <h3>{greeting.greeting}</h3>
     </div>
   )
 }
